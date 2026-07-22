@@ -45,7 +45,7 @@ jobs:
   e2e:
     name: Executar Cypress E2E
     if: ${{ github.event_name == 'workflow_dispatch' }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: quality
 
     env:
@@ -66,11 +66,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Debug env
-        run: |
-          echo "BASE_URL definida: ${{ env.BASE_URL != '' }}"
-          curl -I $BASE_URL || echo "Falha ao conectar em BASE_URL"
 
       - name: Run all tests
         if: ${{ github.event.inputs.tipo_teste == 'all' }}
