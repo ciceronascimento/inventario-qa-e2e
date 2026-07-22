@@ -225,9 +225,7 @@ export class CreateBondScreen {
         let chosenValue: string | undefined
 
         for (const label of priorityOrder) {
-          const match = validOptions.find(
-            (o) => o.textContent?.trim().toUpperCase() === label,
-          )
+          const match = validOptions.find((o) => o.textContent?.trim().toUpperCase() === label)
 
           if (match) {
             chosenValue = match.value

@@ -61,16 +61,16 @@ O hook de pre-commit (Husky) roda o lint automaticamente antes de cada commit.
 
 ## Resultados da última execução
 
-| Spec | Testes | Passou | Falhou |
-| ---- | ------ | ------ | ------ |
-| auth/login.cy.ts | 2 | 2 | — |
-| assets/create-asset.cy.ts | 2 | 2 | — |
-| bonds/create-bond.cy.ts | 5 | 4 | 1 |
-| bonds/edit-bond.cy.ts | 8 | 8 | — |
-| documents/generate-terms.cy.ts | 4 | 4 | — |
-| reports/asset-movement-report.cy.ts | 2 | 2 | — |
-| reports/bonds-by-area-report.cy.ts | 3 | 3 | — |
-| **Total** | **26** | **25** | **1** |
+| Spec                                | Testes | Passou | Falhou |
+| ----------------------------------- | ------ | ------ | ------ |
+| auth/login.cy.ts                    | 2      | 2      | —      |
+| assets/create-asset.cy.ts           | 2      | 2      | —      |
+| bonds/create-bond.cy.ts             | 5      | 4      | 1      |
+| bonds/edit-bond.cy.ts               | 8      | 8      | —      |
+| documents/generate-terms.cy.ts      | 4      | 4      | —      |
+| reports/asset-movement-report.cy.ts | 2      | 2      | —      |
+| reports/bonds-by-area-report.cy.ts  | 3      | 3      | —      |
+| **Total**                           | **26** | **25** | **1**  |
 
 O único caso falhando é `cria uma atribuicao sem colaborador por subarea` (`@bond-new-5`): o
 servidor rejeita o envio exigindo colaborador mesmo quando a opção "sem colaborador" está
@@ -80,11 +80,11 @@ marcada. O defeito está documentado como **BUG-02** em `docs/bugs-e-melhorias.m
 
 Os artefatos gerados por `npm run cy:run:report` ficam em:
 
-| Artefato | Caminho |
-| -------- | ------- |
-| Relatório HTML (mochawesome) | `cypress/reports/mochawesome/index.html` |
-| Vídeos por spec | `cypress/videos/<dominio>/<spec>.mp4` |
-| Screenshots de falha | `cypress/screenshots/` (gerado automaticamente em caso de falha) |
+| Artefato                     | Caminho                                                          |
+| ---------------------------- | ---------------------------------------------------------------- |
+| Relatório HTML (mochawesome) | `cypress/reports/mochawesome/index.html`                         |
+| Vídeos por spec              | `cypress/videos/<dominio>/<spec>.mp4`                            |
+| Screenshots de falha         | `cypress/screenshots/` (gerado automaticamente em caso de falha) |
 
 Para abrir o relatório após a execução:
 

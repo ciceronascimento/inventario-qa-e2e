@@ -1,4 +1,7 @@
-import { buildBondForCollaborator, buildBondWithoutCollaborator } from '@/fixtures/data-builders/bond.builder'
+import {
+  buildBondForCollaborator,
+  buildBondWithoutCollaborator,
+} from '@/fixtures/data-builders/bond.builder'
 import { BondListScreen, CreateBondScreen } from '@/support/screens'
 
 describe('Cadastrar Atribuicao', () => {
